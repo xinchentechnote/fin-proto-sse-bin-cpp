@@ -25,6 +25,7 @@ enable_testing()
 
 add_executable(sse_bin_test ./test/sse_binary_test.cpp)
 target_include_directories(sse_bin_test PUBLIC ${PROJECT_SOURCE_DIR})
+target_link_libraries(sse_bin_test PUBLIC fin_proto_runtime_bin_cpp)
 target_link_libraries(sse_bin_test PUBLIC gtest gtest_main ZLIB::ZLIB)
 
 include(GoogleTest)

@@ -9,9 +9,9 @@
 #include <unordered_map>
 #include <vector>
 #include <iostream>
-#include "include/codec.hpp"
-#include "include/bytebuf.hpp"
-#include "include/checksum.hpp"
+#include "codec.hpp"
+#include "bytebuf.hpp"
+#include "checksum.hpp"
 #include "message_factory.hpp"
 
 struct Heartbeat : public codec::BinaryCodec {
