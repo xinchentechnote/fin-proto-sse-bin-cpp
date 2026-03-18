@@ -27,6 +27,8 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(fin_proto_runtime_bin_cpp)
 
+target_link_libraries(fin_proto_sse_bin_cpp INTERFACE fin_proto_runtime_bin_cpp)
+
 find_package(ZLIB REQUIRED)
 enable_testing()
 
