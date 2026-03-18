@@ -8,6 +8,14 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(FETCHCONTENT_BASE_DIR "$ENV{HOME}/_deps" CACHE PATH "Base directory for FetchContent downloads")
 include(FetchContent)
 
+add_library(fin_proto_sse_bin_cpp INTERFACE)
+
+target_include_directories(fin_proto_sse_bin_cpp
+    INTERFACE
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 FetchContent_Declare(
